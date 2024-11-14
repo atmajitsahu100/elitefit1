@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 250px;
-  background-color: #0747a6;
+  background-color: #000000;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -14,6 +14,12 @@
   overflow: hidden;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
   z-index: 1000; /* Ensures the sidebar is on top */
+  transform: translateX(-100%); /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar--open {
+  transform: translateX(0); /* Slides sidebar into view */
 }
 
 .sidebar__logo {
@@ -96,9 +102,49 @@
   font-weight: 500;
 }
 
+/* Hamburger Button */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100; /* Ensures it appears above the sidebar */
+  color: #f10808;
+}
+
+.hamburger svg {
+  width: 30px;
+  height: 30px;
+}
+
 /* Adjust main content to make space for the fixed sidebar */
 .main-content {
-  margin-left: 250px; /* Matches the sidebar width */
   padding: 20px;
   box-sizing: border-box;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar--open + .main-content {
+  margin-left: 250px; /* Matches the sidebar width */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    transform: translateX(-100%); /* Hidden by default on smaller screens */
+  }
+
+  .sidebar--open {
+    transform: translateX(0);
+  }
+
+  .sidebar--open + .main-content {
+    margin-left: 0;
+  }
 }

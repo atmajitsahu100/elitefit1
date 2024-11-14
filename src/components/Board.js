@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import TaskColumn from './TaskColumn';
 import toast from 'react-hot-toast';
 import Modal from 'react-modal';
-
+import Logo from './Logo';
 Modal.setAppElement('#root');
 
 const Board = () => {
@@ -89,6 +89,7 @@ const Board = () => {
   return (
     <div className='board'>
       {/* Priority Filter and Search Bar */}
+      <Logo/>
       <div className="filter-container">
         <div className="priority-filter">
           <label>Filter by Priority: </label>
@@ -96,7 +97,7 @@ const Board = () => {
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
             className="priority-dropdown"
-          >
+            >
             {priorities.map((priority) => (
               <option key={priority} value={priority}>
                 {priority}
@@ -105,6 +106,7 @@ const Board = () => {
           </select>
         </div>
 
+        {/* <Logo/> */}
         {/* Search bar with button */}
         <div className="search-container">
           <input

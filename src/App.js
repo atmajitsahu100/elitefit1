@@ -12,14 +12,15 @@ import UpcomingTasks from './pages/UpcomingTasks';
 import OverdueTasks from './pages/OverdueTasks';
 import CompletedTasks from './pages/CompletedTasks';
 import AddTask from './pages/AddTask';
-
+import Logo from './components/Logo';
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <Router>
         <div className='app'>
-          <Sidebar />
+          {/* <Sidebar /> */}
           <div className='main-content'>
+          
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/tasks" element={<Tasks />} />

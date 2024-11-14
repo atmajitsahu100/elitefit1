@@ -46,6 +46,15 @@ const TaskItem = ({ task, tasks, setTasks }) => {
     setIsEditing(false);
   };
 
+  const handleMarkComplete = () => {
+    const updatedTasks = tasks.map((t) =>
+      t.id === task.id ? { ...t, status: 'Completed' } : t
+    );
+    setTasks(updatedTasks);
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    toast.success("Task marked as complete");
+  };
+
   return (
     <div
       className={`task-item ${task.status} ${isDragging ? 'dragging' : ''}`}
@@ -114,9 +123,22 @@ const TaskItem = ({ task, tasks, setTasks }) => {
       >
         X
       </button>
-      {!isEditing && (
-        <button className="edit-button" onClick={handleEditToggle}>
-          Edit
+      {/* Three-Dot Button for Edit Toggle */}
+      <button
+        className="three-dot-button"
+        onClick={handleEditToggle}
+        aria-label="Edit task"
+      >
+        ⋮
+      </button>
+      {/* Conditionally render Mark as Complete Button */}
+      {task.status !== 'Completed' && (
+        <button
+          className="mark-complete-button"
+          onClick={handleMarkComplete}
+          aria-label="Mark task as complete"
+        >
+          Mark as Complete
         </button>
       )}
     </div>

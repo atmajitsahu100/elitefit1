@@ -82,6 +82,11 @@
 }
 
 /* Remove Button */
+
+
+
+
+
 .remove-button {
   position: absolute;
   top: 10px;
@@ -154,4 +159,55 @@
 
 .cancel-button:hover {
   background-color: #b12c35;
+}
+
+
+.remove-button,
+.three-dot-button {
+  position: absolute;
+  top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.remove-button {
+  right: 10px;
+  color: #dc3545;
+}
+
+.remove-button:hover {
+  color: #b12c35;
+  transform: scale(1.1);
+}
+
+.three-dot-button {
+  right: 40px;
+  color: #6c757d;
+}
+
+.three-dot-button:hover {
+  color: #343a40;
+  transform: scale(1.1);
+}
+
+.mark-complete-button {
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #17a2b8;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.mark-complete-button:hover {
+  background-color: #138496;
+  transform: scale(1.05);
 }

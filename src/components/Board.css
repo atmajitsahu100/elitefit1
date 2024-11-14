@@ -7,12 +7,13 @@
   overflow-x: hidden;
   max-width: 100vw;
   box-sizing: border-box;
+  background-color: #f4f4f9;
 }
 
 /* Centered Kanban Container with Horizontal Scroll */
 .kanban {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   overflow-x: auto;
   width: 100%;
   max-width: 1200px;
@@ -24,9 +25,9 @@
 .board .col {
   flex: 1;
   min-width: 250px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
   overflow-y: auto;
   max-height: 80vh;
 }
@@ -35,12 +36,12 @@
   text-align: center;
   margin: 10px auto;
   padding: 5px 10px;
-  font-weight: 400;
+  font-weight: 500;
   width: max-content;
-  background-color: #0052cc;
+  background-color: #ff6b6b;
   font-size: 20px;
-  color: white;
-  border-radius: 5px;
+  color: #f4f4f9;
+  border-radius: 8px;
 }
 
 /* Priority Filter and Search Bar Container */
@@ -51,16 +52,16 @@
   width: 100%;
   max-width: 800px;
   margin-bottom: 20px;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Priority Filter Styling */
 .priority-filter {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 1rem;
-  color: #333;
+  color: #4a4a4a;
 }
 
 .priority-filter label {
@@ -70,16 +71,16 @@
 .priority-dropdown {
   padding: 8px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border: 1px solid #bcbcbc;
+  border-radius: 8px;
+  background-color: #e8f0fe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .priority-dropdown:hover,
 .priority-dropdown:focus {
-  border-color: #007bff;
+  border-color: #6c63ff;
   outline: none;
 }
 
@@ -96,8 +97,8 @@
 .search-bar {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px 0 0 5px;
+  border: 1px solid #bcbcbc;
+  border-radius: 8px 0 0 8px;
   font-size: 1em;
   outline: none;
 }
@@ -105,17 +106,17 @@
 /* Style for the search button */
 .search-button {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #6c63ff;
   color: white;
   font-size: 1.2em;
   border: none;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .search-button:hover {
-  background-color: #0056b3;
+  background-color: #4a47a3;
 }
 
 /* Styling for Add Task Section */
@@ -127,17 +128,17 @@
 
 .addTask input {
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-right: 8px;
   font-size: 1rem;
   border: none;
 }
 
 .addTask button {
-  padding: 6px 12px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 4px;
-  background-color: #0052cc;
+  border-radius: 8px;
+  background-color: #ff6b6b;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
@@ -145,24 +146,24 @@
 }
 
 .addTask button:hover {
-  background-color: #014ec0;
+  background-color: #e63e3e;
 }
 
 /* Style for the Add Task Button */
 .open-modal-button {
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #007bff;
+  background-color: #6c63ff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   margin-bottom: 20px;
   transition: background-color 0.3s;
 }
 
 .open-modal-button:hover {
-  background-color: #0056b3;
+  background-color: #4a47a3;
 }
 
 /* Overlay style for modal */
@@ -172,7 +173,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,17 +183,17 @@
 .modal {
   background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   text-align: center;
   animation: slideIn 0.3s ease;
 }
 
 .modal h2 {
   margin-top: 0;
-  color: #333;
+  color: #4a4a4a;
 }
 
 .modal input[type="text"],
@@ -200,32 +201,32 @@
 .modal input[type="date"],
 .modal select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1em;
 }
 
 .modal textarea {
   resize: vertical;
-  min-height: 80px;
+  min-height: 90px;
 }
 
 .submit-button {
-  padding: 10px 15px;
-  background-color: #28a745;
+  padding: 12px 20px;
+  background-color: #28c76f;
   color: white;
   font-size: 1em;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #218838;
+  background-color: #20b255;
 }
 
 /* Animation for modal appearance */
@@ -248,13 +249,13 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #007bff;
+  background-color: #6c63ff;
   color: white;
   font-size: 2rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s, transform 0.2s;
   display: flex;
   align-items: center;
@@ -262,6 +263,6 @@
 }
 
 .floating-add-button:hover {
-  background-color: #0056b3;
+  background-color: #4a47a3;
   transform: scale(1.1);
 }
